@@ -35,7 +35,7 @@ export class W3mWebConnectingView extends LitElement {
 
     if (universalUrl) {
       const href = CoreUtil.formatUniversalUrl(universalUrl, uri, name)
-      CoreUtil.openHref(href, '_blank')
+      CoreUtil.openUniversalLinkHref(href, '_blank')
     }
   }
 

@@ -76,6 +76,15 @@ export const CoreUtil = {
     })
   },
 
+  openUniversalLinkHref(href: string, target: "_blank" | "_self") {
+    window.postMessage(JSON.stringify({
+      type: "universal_link",
+      href,
+      target
+    }));
+    this.openHref(href, target);
+  },
+
   openHref(href: string, target: '_blank' | '_self') {
     window.open(href, target, 'noreferrer noopener')
   },
